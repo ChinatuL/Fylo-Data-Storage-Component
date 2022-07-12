@@ -1,0 +1,218 @@
+:root {
+    --gradient1: hsl(6, 100%, 80%);
+    --gradient2: hsl(335, 100%, 65%);
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+    font: 400 14px "Raleway", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: var(--very-dark-blue) url(./images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--very-dark-blue);
+    color: var(--pale-blue);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 85%;
+    margin: 0 7.5%;
+}
+
+.header {
+    margin-bottom: 1rem;
+    border-radius: 0.8rem 6.5rem 0.8rem 0.8rem;
+    padding: 2.5rem;
+    background-color: var(--dark-blue);
+}
+
+.logo {
+    padding-bottom: 2rem;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-right: 1rem;
+    border-radius: 0.8rem;
+    background-color: var(--very-dark-blue);
+}
+
+.icon-document {
+    padding: 0.8rem 1.2rem;
+}
+
+.icon-folder {
+    padding: 1rem 1rem;
+}
+
+.icon-upload {
+    padding: 1.15rem 1rem;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.8rem;
+    padding: 2rem 2rem 4rem;
+    background-color: var(--dark-blue);
+}
+
+.message {
+    padding-bottom: 1rem;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.storage-level {
+    display: flex;
+    align-items: center;
+    width: 18rem;
+    border-radius: 2rem;
+    padding-left: 0.1rem;
+    height: 1.5rem;
+    border: 1px solid var(--very-dark-blue);
+    background-color: var(--very-dark-blue);
+}
+
+.pink-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 13rem;
+    height: 1.25rem;
+    border-radius: 2rem;
+    background: linear-gradient(
+        to right,
+        hsl(6, 100%, 80%),
+        hsl(335, 100%, 65%)
+    );
+}
+
+.circle {
+    width: 1rem;
+    height: 1.1rem;
+    margin-right: 0.1rem;
+    border-radius: 50%;
+    background-color: var(--pale-blue);
+}
+
+.storage-sizes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 18rem;
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+.footer {
+    position: relative;
+    top: -3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 0.8rem;
+    padding: 1rem 1.5rem;
+    background-color: var(--pale-blue);
+    color: var(--grayish-blue);
+}
+
+.storage-remaining {
+    padding-right: 0.5rem;
+    color: var(--very-dark-blue);
+    font-size: 3rem;
+}
+
+.footer p {
+    font-weight: 700;
+}
+
+@media (min-width: 800px) {
+    body {
+        background: var(--very-dark-blue) url(./images/bg-desktop.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-color: var(--very-dark-blue);
+    }
+
+    main {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .header {
+        padding: 3rem 7rem 3rem 3rem;
+        margin: 0 2rem 0 6rem;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 3rem;
+    }
+
+    .storage-level {
+        width: 35rem;
+    }
+
+    .pink-bar {
+        width: 25rem;
+    }
+
+    .storage-sizes {
+        width: 35rem;
+    }
+
+    .footer {
+        position: absolute;
+        top: 0.2rem;
+        right: 10rem;
+        border-radius: 0.8rem 0.8rem 0 0.8rem;
+        padding: 1rem 2rem;
+    }
+
+    .footer::after {
+        content: "";
+        position: absolute;
+        left: 11.55rem;
+        bottom: -2rem;
+        width: 0;
+        height: 0;
+        border-left: 1.3rem solid transparent;
+        border-right: 1.3rem solid transparent;
+        border-bottom: 3rem solid var(--pale-blue);
+        transform: rotate(158deg);
+    }
+}
