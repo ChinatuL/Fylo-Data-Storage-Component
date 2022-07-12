@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 -   Solution URL: [https://github.com/ChinatuL/Fylo-Data-Storage-Component](https://github.com/ChinatuL/Fylo-Data-Storage-Component)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Live Site URL: [https://chinatul.github.io/Fylo-Data-Storage-Component/](https://chinatul.github.io/Fylo-Data-Storage-Component/)
 
 ## My process
 
